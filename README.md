@@ -12,7 +12,6 @@ struct Task {
 
 vector<Task> tasks;
 
-// Load tasks from file
 void loadTasks() {
     ifstream file("tasks.txt");
     if (!file) return;
@@ -26,7 +25,6 @@ void loadTasks() {
     file.close();
 }
 
-// Save tasks to file
 void saveTasks() {
     ofstream file("tasks.txt");
     for (const auto& task : tasks) {
@@ -36,7 +34,6 @@ void saveTasks() {
     file.close();
 }
 
-// Add a new task
 void addTask() {
     Task task;
     cout << "Enter task title: ";
@@ -47,7 +44,6 @@ void addTask() {
     cout << "Task added.\n";
 }
 
-// Mark a task as completed
 void markCompleted() {
     int index;
     cout << "Enter task number to mark completed: ";
@@ -60,7 +56,6 @@ void markCompleted() {
     }
 }
 
-// View all tasks
 void viewTasks() {
     cout << "\nTo-Do List:\n";
     for (size_t i = 0; i < tasks.size(); ++i) {
